@@ -1,6 +1,10 @@
 version: "2.3"
 services:
   gmod-server:
+    volumes:
+    - type: bind
+      source: ./gmod/gmodserver/garrysmod/cfg/server.cfg
+      target: /home/gmod/gmodserver/garrysmod/cfg/server.cfg
     mem_reservation: 2048m
     build:
       context: .
