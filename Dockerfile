@@ -10,7 +10,3 @@ USER gmod
 WORKDIR /home/gmod/gmodserver/
 ENV update=/update
 CMD ["run"]
-# CMD ["tail","-f","/var/log/dnf.log"]
-# "tail","-f","/var/log/dnf.log"
-
-# "srcds_run -game garrysmod +maxplayers 10 +map gm_construct"
