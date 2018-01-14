@@ -1,11 +1,9 @@
 FROM egeeio/gmod
 RUN dnf install -y ncurses-devel.i686
 
-ENV SERVER_ID rust
-
 COPY run.sh /usr/bin/run
 COPY update.sh /usr/bin/update
 
-WORKDIR /opt/gmod
+WORKDIR /home/gmod/server
 ENV update=/update
-CMD ["run"]
+CMD ["tail", "-f", "/var/log/dnf.log"]
