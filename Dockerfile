@@ -1,5 +1,5 @@
 FROM egeeio/steamcmd
-RUN dnf install -y ncurses-libs.i686
+RUN dnf install -y ncurses-devel.i686
 
 RUN adduser gmod
 # RUN chown gmod /home/gmod
