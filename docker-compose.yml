@@ -1,0 +1,18 @@
+version: "2.3"
+services:
+  gmod-server:
+    volumes:
+    - type: bind
+      source: ./gmod/garrysmod/cfg/server.cfg
+      target: /opt/gmod/garrysmod/cfg/server.cfg
+    - type: bind
+      source: ./gmod/garrysmod/settings/users.txt
+      target: /opt/gmod/garrysmod/settings/users.txt
+    mem_reservation: 2048m
+    build:
+      context: .
+    env_file:
+      - vars.env
+    ports:
+      - "27015:27015/udp"
+      - "27005:27005/udp"
