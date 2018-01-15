@@ -5,6 +5,9 @@ services:
     - type: bind
       source: ./gmod/garrysmod/cfg/server.cfg
       target: /opt/gmod/garrysmod/cfg/server.cfg
+    - type: bind
+      source: ./gmod/garrysmod/settings/users.txt
+      target: /opt/gmod/garrysmod/settings/users.txt
     mem_reservation: 2048m
     build:
       context: .
