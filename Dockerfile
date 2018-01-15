@@ -5,6 +5,6 @@ COPY update.sh /usr/bin/update
 RUN chmod +x /usr/bin/run
 RUN chmod +x /usr/bin/update
 
-WORKDIR /opt/gmodserver/
+WORKDIR /opt/gmod/
 ENV update=/update
 CMD ["run"]
